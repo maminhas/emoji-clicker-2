@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4efff">
+<title>Emoji Clicker Deluxe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><span class="brand-icon">💰</span><div><h1>Emoji Clicker</h1><div class="subtitle">junte moedas, evolua e ascenda!</div></div></div>
+  <nav><a href="#jogo" class="navlink active" data-page="game">🎮 Jogar</a><a href="#conquistas" class="navlink" data-page="achievements">🏆 Conquistas</a></nav>
+</header>
+<main id="gamePage">
+  <div class="game-layout">
+    <aside class="panel upgrade-panel">
+      <div class="panel-title">✨ Upgrades <span class="pill" id="upgradeCount">0/120</span></div>
+      <div class="upgrade-list" id="upgradeGrid"></div>
+    </aside>
+    <div class="center-col">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Suas moedas</div><div class="stat-value" id="coins">0</div><div class="stat-sub">🪙 saldo atual</div></div>
+        <div class="stat"><div class="stat-label">Por segundo</div><div class="stat-value" id="gps">0</div><div class="stat-sub">🌱 produção total</div></div>
+        <div class="stat"><div class="stat-label">Por clique</div><div class="stat-value" id="clickPower">1</div><div class="stat-sub">👆 toque poderoso</div></div>
+      </div>
+      <section class="click-zone" aria-label="Área de clique">
+        <div style="display:grid;place-items:center;z-index:1"><button id="coinButton" class="big-coin" aria-label="Clique para ganhar moedas">💰</button><div class="click-hint">CLIQUE NA MOEDA!</div></div>
+      </section>
+      <section class="panel farm-panel">
+        <div class="panel-title">🌾 Fazendas <span class="pill" id="farmCount">0/20 tipos</span></div>
+        <div class="farm-grid" id="farmGrid"></div>
+      </section>
+      <section class="ascension-box">
+        <div><h2>🌌 Ascensão</h2><p>Recomece sua jornada em troca de fragmentos eternos. Cada fragmento dá <b>+5% de produção</b> e <b>+2% por clique</b> permanentemente. Você ganha mais fragmentos quanto mais moedas acumulou nesta jornada.</p><p>Fragmentos eternos: <span class="ascension-points" id="prestigeShards">0</span> · Ganho ao ascender: <b id="ascensionGain">0</b></p></div>
+        <button class="primary-btn" id="ascendBtn" disabled>✨ Ascender</button>
+      </section>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="secondary-btn" id="saveBtn">💾 Salvar agora</button><button class="secondary-btn" id="resetBtn">🗑️ Reiniciar jogo</button><span class="pill">💾 Salvamento automático ativado</span></div>
+</main>
+<main id="achievementsPage" hidden>
+  <div class="section-heading"><div><h2>🏆 Salão das Conquistas</h2><p class="subtitle">Cada marco conta a história da sua fortuna.</p></div><span class="pill" id="achievementCount">0/24</span></div>
+  <div class="progress-wrap" style="height:12px;margin-bottom:16px"><div class="progress-bar" id="achievementProgress"></div></div>
+  <div class="achievement-grid" id="achievementGrid"></div>
+</main>
+<footer>Seu progresso fica salvo no armazenamento local deste navegador. Não limpe os dados do site se quiser manter seu save.</footer>
+</div>
+<div id="toast" class="toast" hidden></div>
+<script src="game.js"></script>
+</body>
+</html>

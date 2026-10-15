@@ -1,0 +1,17 @@
+EMOJI CLICKER DELUXE
+
+Como jogar:
+1. Extraia todos os arquivos da pasta ZIP para a mesma pasta.
+2. Abra index.html no navegador.
+3. Use os botões Jogar e Conquistas para trocar de página sem perder o progresso.
+
+Conteúdo:
+- 20 fazendas, com custo que aumenta 15% a cada compra de cada tipo.
+- 120 upgrades compráveis.
+- 24 conquistas com ícones, descrições e progresso.
+- Emojis dourados que aparecem aleatoriamente e dão bônus.
+- Ascensão com bônus permanentes.
+- Salvamento automático via localStorage, além do botão Salvar agora.
+
+Observação:
+O save fica no navegador e no dispositivo em que você joga. Não limpe os dados do site/navegador se quiser manter o progresso. Como os arquivos usam localStorage, abra pelo mesmo navegador e na mesma origem para compartilhar o mesmo save.
